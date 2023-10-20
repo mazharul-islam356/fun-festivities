@@ -3,6 +3,8 @@
 import { useLoaderData } from "react-router-dom";
 import banner from "../../assets/img/banner.jpg";
 import Cards from "./card/Cards";
+import Services from "./services/Services";
+import OnlineRequ from "./onlineRequ/OnlineRequ";
 
 
 
@@ -47,7 +49,8 @@ const Home = () => {
        </div>
     
     
-
+      <Services></Services>
+      <OnlineRequ></OnlineRequ>
 
 
       </div>

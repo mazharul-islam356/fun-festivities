@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 
 const Details = ({userr}) => {
     console.log(userr)
