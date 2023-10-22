@@ -4,7 +4,7 @@ import { FaBirthdayCake, FaMagic, FaMusic } from 'react-icons/fa';
 const Services = () => {
   return (
     <div>
-      <div className="bg-slate-200 h-[500px] rounded-sm mt-10">
+      <div className="bg-slate-200 lg:h-[500px] rounded-sm mt-10">
         <div className="text-center">
           <h1 className="text-3xl pt-14">
             It’s simple. You have an event to plan and <br /> we have{" "}
@@ -15,9 +15,9 @@ const Services = () => {
 
 
 
-        <div className='text-center ml-14 mt-12 grid grid-cols-3'>
+        <div className='text-center lg:gap-4 lg:mr-10 lg:ml-14 lg:mt-12 mt-8 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1'>
 
-          <div className="card card-compact w-96 py-4 bg-base-100 shadow-xl">
+          <div className="card card-compact mr-2 mb-2 py-4 bg-base-100 shadow-xl">
             <FaBirthdayCake className='text-6xl text-orange-400 ml-40 mt-4'></FaBirthdayCake>
 
             <div className='p-4'>
@@ -26,7 +26,7 @@ const Services = () => {
             </div>
             </div>
 
-            <div className="card card-compact w-96 py-4 bg-base-100 shadow-xl">
+            <div className="card card-compact py-4 bg-base-100 shadow-xl">
             <FaMagic className='text-6xl text-orange-400 ml-40 mt-4'></FaMagic>
 
             <div className='p-4'>
@@ -35,7 +35,7 @@ const Services = () => {
             </div>
             </div>
 
-            <div className="card card-compact w-96 py-4 bg-base-100 shadow-xl">
+            <div className="card card-compact py-4 bg-base-100 shadow-xl">
             <FaMusic className='text-6xl text-orange-400 ml-40 mt-4'></FaMusic>
 
             <div className='p-4'>

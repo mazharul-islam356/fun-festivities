@@ -13,9 +13,9 @@ const Cards = ({data}) => {
         
       {/* card-01 */}
 
-    <div>
+    <div data-aos="fade-up">
 
-    <div className="card h-[500px] w-96 bg-base-100 shadow-xl">
+    <div  className="card h-[500px] space-x-6 w-96 bg-base-100 shadow-xl">
         <figure>
           <img className="h-60 w-full"
             src={image}

@@ -23,7 +23,7 @@ const Home = () => {
             alt=""
           />
 
-          <div className="absolute text-center top-72 ml-[400px] ">
+          <div className="absolute text-center top-72 lg:ml-[400px] ">
             <p className="text-orange-400 text-5xl font-bold">We Create</p>
             <p className="text-white text-5xl font-bold">You Celebrate</p>
             <p className="bottom-90 text-xl text-white text-center">
@@ -44,7 +44,7 @@ const Home = () => {
 
 
        
-       <div className="grid gap-6 grid-cols-3 ml-14 mt-4 justify-center">
+       <div className="grid gap-6 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mr-12 -ml-2 lg:ml-14 mt-4 justify-center">
          {data.map(user=><Cards key={user.id} data={user}></Cards>)}
        </div>
     
