@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 /* eslint-disable react/prop-types */
 const Cards = ({data}) => {
-    console.log(data);
+    // console.log(data);
    
     const {id,name,price,image,short_description} = data
     

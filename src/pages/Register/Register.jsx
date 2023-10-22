@@ -1,12 +1,12 @@
 
 import { Link } from "react-router-dom";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import auth from "../../firebase/firebase.config";
 import toast from "react-hot-toast";
-
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Register = () => {
 
+  const {REuser} = useContext(AuthContext)
  
 
   const handleSubmit = (e) =>{
@@ -27,16 +27,17 @@ const Register = () => {
 
       toast.error('Please include Special Characters in your password')
       return
-
     }
-    
-    
-    createUserWithEmailAndPassword(auth,email,pass)
-    .then(res=>console.log(res.user))
+
+
+    REuser(email,pass)
+    .then(result=>console.log(result.user))
     .catch(err=>console.log(err))
+
+      
   }
 
-
+  
 
 
     return (
@@ -66,11 +67,12 @@ const Register = () => {
                   <span className="label-text">Password</span>
                 </label>
                 <input type="password" placeholder="Password" name="pass" className="input input-bordered" required />
-                <p>Already have a account? <span><Link to='/login' className="underline font-semibold">Login</Link> </span>Now!</p>
               </div>
-              <div className="form-control mt-6">
+              <div className="form-control mt-2">
                 <button className="btn btn-primary">Register</button>
               </div>
+
+              <p>Already have a account? Please <span><Link to='/login' className="underline font-semibold">Login</Link> </span>.</p>
             </form>
           </div>
         </div>

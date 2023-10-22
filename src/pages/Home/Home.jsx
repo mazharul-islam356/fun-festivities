@@ -35,8 +35,8 @@ const Home = () => {
 
 
 
-        <div className="bg-orange-400 rounded-lg w-full h-20">
-          <h2 className="text-2xl mt-8">See Our Services</h2>
+        <div className="bg-orange-400 rounded-lg w-full h-20 mt-4">
+          <h2 className="text-2xl font-semibold pt-6 text-center">See Our Services</h2>
         </div>
 
 

@@ -94,7 +94,12 @@ const Login = () => {
                   <FcGoogle className="text-xl"></FcGoogle>
                 </button>
               
-              <p>
+              
+            </div>
+            <div className="form-control mt-2">
+              <button className="btn btn-primary">Login</button>
+            </div>
+            <p>
                 New to Here?{" "}
                 <span>
                   <Link to="/register" className="underline font-semibold">
@@ -103,10 +108,6 @@ const Login = () => {
                 </span>
                 Now!
               </p>
-            </div>
-            <div className="form-control mt-6">
-              <button className="btn btn-primary">Login</button>
-            </div>
           </form>
         </div>
       </div>

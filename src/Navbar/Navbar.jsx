@@ -1,12 +1,23 @@
 import { NavLink } from "react-router-dom";
 import logo from '../assets/img/logo.png';
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const Navbar = () => {
+  const {userr,logOut} = useContext(AuthContext)
+  // console.log(userr);
+
+  const handleLogOut = () =>{
+    logOut()
+    .then(()=>console.log('log out succecfullly'))
+    .catch(err=>console.log(err))
+  }
 
     const navLink = <>
     <NavLink to='/'><button className="btn btn-ghost">Home</button></NavLink>
-     <NavLink to='/login'><button className="btn btn-ghost">Login</button></NavLink>
-     <NavLink to='/register'><button className="btn btn-ghost">Register</button></NavLink>
+     
+     <NavLink to='/Extra01'><button className="btn btn-ghost">Extra01</button></NavLink>
+     <NavLink to='/Extra02'><button className="btn btn-ghost">Extra02</button></NavLink>
     </>
   return (
     <div className="navbar bg-base-100">
@@ -43,8 +54,23 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+
+    
+
+
+     <NavLink to='/register'><button className="btn btn-ghost mr-1">Register</button></NavLink>
+
+
+     {
+      userr ?
+      <>
+       <NavLink onClick={handleLogOut} to='/login'><button className="btn btn-outline btn-sm btn-error">Log out</button></NavLink>
+      </>:
+      <NavLink to='/login'><button className="btn btn-outline btn-sm btn-error">Login</button></NavLink>
+    }
+
       </div>
+      {userr && <span className="ml-2">{userr.email}</span>}
     </div>
   );
 };
