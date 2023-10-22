@@ -18,8 +18,8 @@ const routes = createBrowserRouter([
             },
             {
                 path:'/login',
-                element: <Login></Login>,
-                loader:() => fetch('/data.json')
+                element: <Login></Login>
+                
             },
             {
                 path:'/register',

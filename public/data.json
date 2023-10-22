@@ -2,48 +2,48 @@
   {
     "id": 1,
     "name": "Weddings",
-    "price": "varies",
-    "image": "https://i.imgur.com/weddings.jpg",
+    "price": "20",
+    "image": "https://i.ibb.co/98PMw24/weading.jpg",
     "short_description": "A joyous occasion where friends and family come together to celebrate the love of two people.",
     "long_description": "Weddings are a special day for couples to celebrate their love and commitment to each other. They can be small and intimate or large and lavish, but they are always a day to remember."
   },
   {
     "id": 2,
     "name": "Birthdays",
-    "price": "varies",
-    "image": "https://i.imgur.com/birthdays.jpg",
+    "price": "42",
+    "image": "https://i.ibb.co/D4f1pqb/bdy.jpg",
     "short_description": "A special day to celebrate the life and accomplishments of an individual.",
     "long_description": "Birthdays are a great time to celebrate the life of a loved one. They can be a simple get-together with close friends and family or a more elaborate event with food, drinks, and dancing."
   },
   {
     "id": 3,
     "name": "Anniversaries",
-    "price": "varies",
-    "image": "https://i.imgur.com/anniversaries.jpg",
+    "price": "35",
+    "image": "https://i.ibb.co/CwBfSR2/aniversery.jpg",
     "short_description": "A time to celebrate the love and commitment of two people.",
     "long_description": "Anniversaries are a time to celebrate the love and commitment of two people. They can be a romantic dinner for two or a larger party with friends and family."
   },
   {
     "id": 4,
     "name": "Graduations",
-    "price": "varies",
-    "image": "https://i.imgur.com/graduations.jpg",
+    "price": "15",
+    "image": "https://i.ibb.co/mFbB27Y/graduation.jpg",
     "short_description": "A time to celebrate the accomplishments of students.",
     "long_description": "Graduations are a time to celebrate the accomplishments of students. They can be a formal ceremony at a school or a more informal gathering at home."
   },
   {
     "id": 5,
     "name": "Holidays",
-    "price": "varies",
-    "image": "https://i.imgur.com/holidays.jpg",
+    "price": "40",
+    "image": "https://i.ibb.co/wCGX79P/holy.jpg",
     "short_description": "A time to celebrate with loved ones and enjoy the traditions of the season.",
     "long_description": "Holidays are a time to celebrate with loved ones and enjoy the traditions of the season. They can be religious holidays, such as Christmas or Hanukkah, or secular holidays, such as New Year's Eve or Thanksgiving."
   },
   {
     "id": 6,
     "name": "Community events",
-    "price": "varies",
-    "image": "https://i.imgur.com/community-events.jpg",
+    "price": "25",
+    "image": "https://i.ibb.co/fpPMsQY/community.jpg",
     "short_description": "A great way to meet new people and get involved in your community.",
     "long_description": "Community events are a great way to meet new people and get involved in your community. They can be anything from a town fair to a charity fundraiser."
   }
