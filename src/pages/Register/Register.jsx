@@ -12,12 +12,22 @@ const Register = () => {
   const handleSubmit = (e) =>{
     e.preventDefault()
     const name = e.target.name.value;
-    const image = e.target.img.value;
     const email = e.target.email.value;
     const pass = e.target.pass.value;
-    console.log(name,image,email,pass);
+    console.log(name,email,pass);
     if(pass.length < 6){
       toast.error('Password should be at least 6 characters')
+      return
+    }
+     else if(!/[A-Z]/.test(pass)){
+      toast.error('Please include at least one uppercase letter in your password')
+      return
+    }
+    else if (!/[!@#$%^&*()_+\-=[{};':"|,.<>/?]+/.test(pass)){
+
+      toast.error('Please include Special Characters in your password')
+      return
+
     }
     
     
@@ -43,13 +53,7 @@ const Register = () => {
                   <span className="label-text">Name</span>
                 </label>
                 <input type="text" name="name" placeholder="Name" className="input input-bordered" required />
-              </div>
-            <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Image url</span>
-                </label>
-                <input type="text" name="img" placeholder="Image url" className="input input-bordered" required />
-              </div>
+              </div>           
               
               <div className="form-control">
                 <label className="label">

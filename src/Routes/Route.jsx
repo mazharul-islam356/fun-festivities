@@ -4,6 +4,7 @@ import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import Details from "../pages/detail/Details";
+import Error404 from "../error404";
 
 const routes = createBrowserRouter([
     {
@@ -27,11 +28,17 @@ const routes = createBrowserRouter([
             },
             {
                 path:'/details/:id',
-                element:<Details></Details>
+                element:<Details></Details>,
+                loader:() => fetch('/data.json')
                 
-            }
+            },
+           
 
         ]
+    },
+    {
+        path:'*',
+        element:<Error404></Error404>
     }
 ])
 export default routes;
