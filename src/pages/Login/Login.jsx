@@ -11,7 +11,8 @@ const Login = () => {
   const {googleLogin} = useContext(AuthContext)
   const [error,setError] = useState('')
 
-
+ 
+  error && toast.error('Email/Password do not match') 
   const handleLogin = (media) => {
     media()
     .then(res=>console.log(res.user))
@@ -53,8 +54,11 @@ const Login = () => {
       
   } 
   
+
+
+
     
-  error && toast.error('Email addresses do not match') 
+  
 
 
   return (
