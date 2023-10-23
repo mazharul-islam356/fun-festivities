@@ -5,7 +5,10 @@ import { Navigate } from "react-router-dom";
 
 const PrivetRoute = ({children}) => {
 
-    const {userr} = useContext(AuthContext)
+    const {userr,loading} = useContext(AuthContext)
+    if(loading){
+      return <span className="loading loading-infinity loading-lg"></span>
+    }
 
     if(userr){
        return children

@@ -6,6 +6,8 @@ import Register from "../pages/Register/Register";
 import Details from "../pages/detail/Details";
 import Error404 from "../error404";
 import PrivetRoute from "./PrivetRoute";
+import Messages from "../ExtraSection/Messages";
+import Help from "../ExtraSection/Help";
 
 const routes = createBrowserRouter([
     {
@@ -33,6 +35,14 @@ const routes = createBrowserRouter([
                 loader:() => fetch('/data.json')
                 
             },
+            {
+                path:'/message',
+                element:<PrivetRoute><Messages></Messages></PrivetRoute>
+            },
+            {
+                path:'/help',
+                element:<PrivetRoute><Help></Help></PrivetRoute>
+            }
            
 
         ]

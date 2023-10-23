@@ -16,8 +16,8 @@ const Navbar = () => {
     const navLink = <>
     <NavLink to='/'><button className="btn btn-ghost">Home</button></NavLink>
      
-     <NavLink to='/Extra01'><button className="btn btn-ghost">Extra01</button></NavLink>
-     <NavLink to='/Extra02'><button className="btn btn-ghost">Extra02</button></NavLink>
+     <NavLink to='/message'><button className="btn btn-ghost">Message</button></NavLink>
+     <NavLink to='/help'><button className="btn btn-ghost">Help Center</button></NavLink>
     </>
   return (
     <div className="navbar bg-base-100">
@@ -70,7 +70,13 @@ const Navbar = () => {
     }
 
       </div>
-      {userr && <span className="ml-2">{userr.email}</span>}
+      {userr && <>
+        <span className="ml-2 mr-2">{userr.email}</span>
+        <div className="w-10 rounded-full">
+          <img src={userr.photoURL} alt="User Pic" />
+        </div>
+      </>
+      }
     </div>
   );
 };
