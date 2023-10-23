@@ -71,8 +71,8 @@ const Navbar = () => {
 
       </div>
       {userr && <>
-        <span className="ml-2 mr-2">{userr.email}</span>
-        <div className="w-10 rounded-full">
+        <span className="lg:ml-2 mr-2">{userr.email}</span>
+        <div className="w-10  rounded-full">
           <img src={userr.photoURL} alt="User Pic" />
         </div>
       </>

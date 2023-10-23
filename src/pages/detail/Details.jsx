@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import swal from "sweetalert";
 
 const Details = () => {
     const {id} = useParams()
@@ -25,6 +26,10 @@ const Details = () => {
     
     // const price = cardData[0].price
     // const short_description = cardData[0].short_description
+
+    const handleBook = () => {
+      swal("Confirmed!", "You booking this event", "success");
+    }
     
 
     return (
@@ -36,7 +41,7 @@ const Details = () => {
     <h2 className=" text-2xl font-bold card-title">{name}</h2>
     <p>{long_description}</p>
     <div className="card-actions">
-      <button className="btn btn-primary">Book Now</button>
+      <button onClick={handleBook} className="btn btn-primary">Book Now</button>
     </div>
   </div>
 </div>

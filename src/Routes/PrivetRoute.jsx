@@ -23,4 +23,6 @@ const PrivetRoute = ({children}) => {
     );
 };
 
+
+
 export default PrivetRoute;

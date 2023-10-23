@@ -42,7 +42,7 @@ const Register = () => {
 
     return (
         <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content w-[450px] flex-col">
+        <div className="hero-content lg:w-[450px] flex-col">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold mb-6">Register now!</h1>
             
@@ -79,5 +79,6 @@ const Register = () => {
       </div>
     );
 };
+
 
 export default Register;

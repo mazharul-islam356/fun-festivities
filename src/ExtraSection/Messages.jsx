@@ -2,7 +2,7 @@ import { GoUnread } from 'react-icons/go';
 import { FaCloudsmith } from 'react-icons/fa';
 const Messages = () => {
     return (
-        <div className='flex items-center'>
+        <div className='lg:flex md:flex items-center'>
             <div className="rounded-xl artboard phone-4 bg-slate-200">
 
             <div className="form-control">
@@ -27,7 +27,7 @@ const Messages = () => {
             </div>
 
 
-            <div className='ml-96 text-3xl font-bold'>
+            <div className='lg:ml-96 md:ml-20 text-3xl font-bold'>
                 <p>Welcome to message center!</p>
             </div>
         </div>
