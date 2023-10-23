@@ -18,7 +18,7 @@ const AuthProvider = ({children}) => {
     }
 
 
-    // user
+    // REuser
     const REuser = (email,pass) =>{
         setLoading(true)
         return createUserWithEmailAndPassword(auth,email,pass)

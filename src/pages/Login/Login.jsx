@@ -3,13 +3,14 @@ import { FcGoogle } from 'react-icons/fc';
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import toast from "react-hot-toast";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
 
 const Login = () => {
 
   const {googleLogin} = useContext(AuthContext)
   const [error,setError] = useState('')
+
 
   const handleLogin = (media) => {
     media()
@@ -37,22 +38,23 @@ const Login = () => {
       return
 
     }
+
+    
+   
     
     if(email,pass){
-    createUserWithEmailAndPassword(auth,email,pass)
+    signInWithEmailAndPassword(auth,email,pass)
     .then(res=>console.log(res.user))
     .catch(err=>setError(err.message))
-    setError('')
+    
+    // setError('')
     return
   } 
-  
-
       
-    }
-
-
-
-
+  } 
+  
+    
+  error && toast.error('Email addresses do not match') 
 
 
   return (
@@ -62,7 +64,11 @@ const Login = () => {
           <h1 className="text-5xl font-bold mb-6">Login now!</h1>
         
         </div>
-        <p className="text-red-500">{error}</p>
+        {
+          
+        }
+        
+     
         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 ">
           <form onSubmit={handleLoginSubmit} className="card-body">
             <div className="form-control">

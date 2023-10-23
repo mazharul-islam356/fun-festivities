@@ -14,10 +14,16 @@ const Navbar = () => {
   }
 
     const navLink = <>
-    <NavLink to='/'><button className="btn btn-ghost">Home</button></NavLink>
+    <NavLink to='/' className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "text-red-400 underline" : ""
+              }><button className="btn btn-ghost">Home</button></NavLink>
      
-     <NavLink to='/message'><button className="btn btn-ghost">Message</button></NavLink>
-     <NavLink to='/help'><button className="btn btn-ghost">Help Center</button></NavLink>
+     <NavLink to='/message' className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "text-red-400 underline" : ""
+              }><button className="btn btn-ghost">Message</button></NavLink>
+     <NavLink to='/help' className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "text-red-400 underline" : ""
+              }><button className="btn btn-ghost">Help Center</button></NavLink>
     </>
   return (
     <div className="navbar bg-base-100">

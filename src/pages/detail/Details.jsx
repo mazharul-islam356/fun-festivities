@@ -8,7 +8,7 @@ const Details = () => {
 
     const [cardData,setCardData] = useState([])
     useEffect(()=>{
-        fetch('/public/data.json')
+        fetch('/data.json')
         .then(res=>res.json())
         .then(data=>setCardData(data))
     },[])
