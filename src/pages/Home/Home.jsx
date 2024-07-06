@@ -17,6 +17,8 @@ const Home = () => {
     <div>
       <div>
         <div>
+
+          
           <img
             className="relative bg-cover w-[1392px] h-[600px]"
             src={banner}
@@ -38,10 +40,6 @@ const Home = () => {
         <div className="bg-orange-400 rounded-lg w-full h-20 mt-4">
           <h2 className="text-2xl font-semibold pt-6 text-center">See Our Services</h2>
         </div>
-
-
-
-
 
        
        <div className="grid gap-6 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mr-12 -ml-2 lg:ml-14 mt-4 justify-center">

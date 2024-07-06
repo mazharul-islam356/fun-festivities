@@ -13,18 +13,18 @@ const Navbar = () => {
     .catch(err=>console.log(err))
   }
 
-    const navLink = <>
+    const navLink = <div className="flex gap-6 font-semibold">
     <NavLink to='/' className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "text-red-400 underline" : ""
-              }><button className="btn btn-ghost">Home</button></NavLink>
+              }><button className="">Home</button></NavLink>
      
      <NavLink to='/message' className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "text-red-400 underline" : ""
-              }><button className="btn btn-ghost">Message</button></NavLink>
+              }><button className="">Message</button></NavLink>
      <NavLink to='/help' className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "text-red-400 underline" : ""
-              }><button className="btn btn-ghost">Help Center</button></NavLink>
-    </>
+              }><button className="">Help Center</button></NavLink>
+    </div>
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -64,7 +64,7 @@ const Navbar = () => {
     
 
 
-     <NavLink to='/register'><button className="btn btn-ghost mr-1">Register</button></NavLink>
+     <NavLink to='/register'><button className="btn btn-success btn-sm mr-2 text-white">Register</button></NavLink>
 
 
      {
@@ -76,6 +76,7 @@ const Navbar = () => {
     }
 
       </div>
+
       {userr && <>
         <span className="lg:ml-2 mr-2">{userr.email}</span>
         <div className="w-10  rounded-full">
@@ -83,6 +84,7 @@ const Navbar = () => {
         </div>
       </>
       }
+      
     </div>
   );
 };
