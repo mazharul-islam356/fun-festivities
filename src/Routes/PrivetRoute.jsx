@@ -2,6 +2,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { Navigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const PrivetRoute = ({children}) => {
 
@@ -12,6 +13,8 @@ const PrivetRoute = ({children}) => {
 
     if(userr){
        return children
+    }else{
+      toast.error('Please login first')
     }
 
 
